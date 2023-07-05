@@ -1,0 +1,16 @@
+{
+	"name" : "Overpowering Heroes - Xarblis",
+	"description" : "",
+
+	"version" : "0.0.0",
+	"author" : "TheInfernoDevil",
+	"modType" : "Other",
+	"contact" : "",
+	"heroes" :
+	[
+		"Config/OverpoweringHeroes/Xarblis/Hero.json"
+	],
+	"translations" : [
+		"Config/OverpoweringHeroes/Xarblis/Translations/English.json"
+	],
+}

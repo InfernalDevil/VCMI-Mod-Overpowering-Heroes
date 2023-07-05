@@ -1,0 +1,73 @@
+{
+	"xarblis":
+	{
+		"class" : "heretic",
+		"images" : {
+			"large" : "OverpoweringHeroes/Portraits/Xarblis/Large.png",
+			"small" : "OverpoweringHeroes/Portraits/Xarblis/Small.png",
+			"specialtyLarge" : "OverpoweringHeroes/Specialties/Xarblis/Large.png",
+			"specialtySmall" : "OverpoweringHeroes/Specialties/Xarblis/Small.png"
+		},
+        "texts" :
+        {
+            "name" : "Xarblis",
+            "biography" : "Xarblis, also known as The Lord of Destruction, is the younger brother of Xerifer. Like his elder brother, he is also interested in Dark power. After Erathians had put his father into execution, he followed his brother to the Kreegans and also gained a high position there.",
+            "specialty" : {
+                "description" : "Fire Trial\r\nDouble damage of fire spells, and extra bonus for Armageddon.\r\n\r\nDark Threat\r\nMake enemy to fear.",
+                "tooltip" : "Fire Trial\r\n\r\nDark Threat",
+                "name" : "Dark Power"
+            }
+        },
+		"female": false,
+		"spellbook": [ "armageddon" ],
+		"skills":
+		[
+			{ "skill" : "wisdom", "level": "basic" },
+			{ "skill" : "leadership", "level": "basic" },
+			{ "skill" : "fireMagic", "level": "basic" }
+		],
+		"specialty" : {
+			"bonuses" : {
+				"armageddon": {
+					"type" : "SPECIFIC_SPELL_DAMAGE",
+					"subtype" : "spell.armageddon",
+					"updater" : "TIMES_HERO_LEVEL",
+					"val" : 8
+				},
+				"fireSpellPremy" : {
+					"type" : "FIRE_SPELL_DMG_PREMY",
+					"val": 100
+				},
+				"armageddonImmunity": {
+					"type" : "SPELL_IMMUNITY",
+					"subtype" : "spell.armageddon",
+					"val" : 0,
+					"valueType" : "BASE_NUMBER",
+					"addInfo" : 1
+				},
+				"fearless": {
+					"type" : "FEARLESS"
+				},
+				"fear" :
+				{
+					"type" : "FEAR"
+				}
+			}
+		},
+		"army" :
+		[
+			{
+				"min" : 10, "max" : 20,
+				"creature" : "imp"
+			},
+			{
+				"min" : 4, "max" : 7,
+				"creature" : "hellHound"
+			},
+			{
+				"min" : 2, "max" : 3,
+				"creature" : "hellHound"
+			}
+		]
+	}
+}

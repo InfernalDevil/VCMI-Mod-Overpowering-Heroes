@@ -1,0 +1,92 @@
+{
+	"roother": {
+		"class" : "warlock",
+		"images" : {
+			"large" : "OverpoweringHeroes/Portraits/Roother/Large.png",
+			"small" : "OverpoweringHeroes/Portraits/Roother/Small.png",
+			"specialtyLarge" : "OverpoweringHeroes/Specialties/Roother/Large.png",
+			"specialtySmall" : "OverpoweringHeroes/Specialties/Roother/Small.png"
+		},
+        "texts" :
+        {
+            "name" : "Roother",
+            "biography" : "With his unique ability that he can understand what dragon says and talk to dragons, Roother got recognized as the Prince of Dragons. However, his enthusiast in dragon never stopped. He created a special potion and transformed himself into a Dragon.",
+            "specialty" : {
+                "description" : "Dragons\r\n...\r\n\r\nFlying\r\n...",
+                "tooltip" : "Dragons\r\n\r\nFlying",
+                "name" : "Dragons'Power"
+            }
+        },
+		"female": false,
+		"skills":
+		[
+			{ "skill" : "tactics", "level": "basic" },
+			{ "skill" : "offence", "level": "basic" },
+			{ "skill" : "logistics", "level": "basic" }
+		],
+		"specialty" : {
+			"bonuses" : {
+				"flyingMovement": {
+					"type" : "FLYING_MOVEMENT",
+					"val" : 0,
+					"valueType" : "INDEPENDENT_MIN"
+				},
+				"flyingNoPenality": {
+					"type" : "ROUGH_TERRAIN_DISCOUNT",
+					"val" : 100,
+					"valueType" : "BASE_NUMBER"
+				},
+				"dragonAttack":
+				{
+					"limiters" : [ "DRAGON_NATURE" ],
+					"subtype" : "primSkill.attack",
+					"type" : "PRIMARY_SKILL",
+					"val" : 4,
+					"valueType": "PERCENT_TO_BASE",
+					"updater" : "TIMES_HERO_LEVEL"
+				},
+				"dragonDefense":
+				{
+					"limiters" : [ "DRAGON_NATURE" ],
+					"subtype" : "primSkill.defence",
+					"type" : "PRIMARY_SKILL",
+					"val" : 2,
+					"valueType": "PERCENT_TO_BASE",
+					"updater" : "TIMES_HERO_LEVEL"
+				},
+				"dragonSpeed":
+				{
+					"limiters" : [ "DRAGON_NATURE" ],
+					"type" : "STACKS_SPEED",
+					"val" : 50,
+					"valueType": "PERCENT_TO_BASE"
+				},
+				"dragonDamage": {
+					"limiters" : [ "DRAGON_NATURE" ],
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : 0,
+					"updater": {
+						"type" : "GROWS_WITH_LEVEL",
+						"parameters" : [ 50, 1 ]
+					},
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"army" :
+		[
+			{
+				"min" : 30, "max" : 40,
+				"creature" : "troglodyte"
+			},
+			{
+				"min" : 4, "max" : 6,
+				"creature" : "harpy"
+			},
+			{
+				"min" : 3, "max" : 4,
+				"creature" : "beholder"
+			}
+		]
+	}
+}

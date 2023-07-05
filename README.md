@@ -1,1 +1,1 @@
-"# VCMI-Mod-Overpowering-Heroes" 
+# VCMI-Mod-Overpowering-Heroes"

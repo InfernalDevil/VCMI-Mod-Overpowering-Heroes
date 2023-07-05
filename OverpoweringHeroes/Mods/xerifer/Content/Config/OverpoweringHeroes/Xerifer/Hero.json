@@ -1,0 +1,97 @@
+{
+	"xerifer":
+	{
+		"class" : "demoniac",
+		"images" : {
+			"large" : "OverpoweringHeroes/Portraits/Xerifer/Large.png",
+			"small" : "OverpoweringHeroes/Portraits/Xerifer/Small.png",
+			"specialtyLarge" : "OverpoweringHeroes/Specialties/Xerifer/Large.png",
+			"specialtySmall" : "OverpoweringHeroes/Specialties/Xerifer/Small.png"
+		},
+        "texts" :
+        {
+            "name" : "Xerifer",
+            "biography" : "Xerifer is the elder brother of Xarblis. He is interested in Dark power. He was disliked by the Erathians because his power was considered \"evil\". After his father was put into execution by the Erathians due to some conflicts, he defected to the Kreegans and was valued by the Devils. Eventually he gained a high position there.",
+            "specialty" : {
+                "description" : "Speed Up\r\nSpeed up, especially for evil troops.\r\n\r\nKiller\r\nMore attack damage, especially for evil troops.",
+                "tooltip" : "Speed Up\r\n\r\nKiller",
+                "name" : "Dark Might"
+            }
+        },
+		"female": false,
+		"skills":
+		[
+			{ "skill" : "leadership", "level": "basic" },
+			{ "skill" : "tactics", "level": "basic" },
+			{ "skill" : "wisdom", "level": "basic" }
+		],
+		"specialty" : {
+			"bonuses" : {
+				"speedUniversal" : {
+					"type" : "STACKS_SPEED",
+					"updater": {
+						"type": "GROWS_WITH_LEVEL",
+						"parameters" : [ 20, 5 ]
+					}
+				},
+				"speedEvil" : {
+					"type" : "STACKS_SPEED",
+					"limiters" : {
+						"type" : "CREATURE_ALIGNMENT_LIMITER",
+						"parameters" : [ "evil" ]
+					},
+					"updater" :  {
+						"type" : "GROWS_WITH_LEVEL",
+						"parameters" : [ 5 ]
+					}
+				},
+				"damageBase":
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : 0,
+					"val" : 10,
+					"valueType" : "PERCENT_TO_ALL"
+				},
+				"damageGrowable":
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : 0,
+					"valueType" : "PERCENT_TO_ALL",
+					"updater": {
+						"type" : "GROWS_WITH_LEVEL",
+						"parameters" : [ 30 ]
+					}
+				},
+				"damageGrowableEvil":
+				{
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : 0,
+					"limiters" : {
+						"type" : "CREATURE_ALIGNMENT_LIMITER",
+						"parameters" : [ "evil" ]
+					},
+					"valueType" : "PERCENT_TO_ALL",
+					"updater": {
+						"type" : "GROWS_WITH_LEVEL",
+						"parameters" : [ 50, 2 ]
+					}
+				}
+			}
+		},
+		"army" :
+		[
+			{
+				"min" : 10, "max" : 20,
+				"creature" : "imp"
+			},
+			{
+				"min" : 4, "max" : 7,
+				"creature" : "hellHound"
+			},
+			{
+				"min" : 2, "max" : 3,
+				"creature" : "hellHound"
+			}
+		]
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name" : "Overpowering Heroes - Evister",
+	"description" : "",
+
+	"version" : "0.0.0",
+	"author" : "TheInfernoDevil",
+	"modType" : "Other",
+	"contact" : "",
+	"heroes" :
+	[
+		"Config/OverpoweringHeroes/Evister/Hero.json"
+	],
+	"translations" : [
+		"Config/OverpoweringHeroes/Evister/Translations/English.json"
+	],
+}

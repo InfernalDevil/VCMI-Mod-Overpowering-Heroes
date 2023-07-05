@@ -1,0 +1,16 @@
+{
+	"name" : "Overpowering Heroes - Xerifer",
+	"description" : "",
+
+	"version" : "0.0.0",
+	"author" : "TheInfernoDevil",
+	"modType" : "Other",
+	"contact" : "",
+	"heroes" :
+	[
+		"Config/OverpoweringHeroes/Xerifer/Hero.json"
+	],
+	"translations" : [
+		"Config/OverpoweringHeroes/Xerifer/Translations/English.json"
+	],
+}

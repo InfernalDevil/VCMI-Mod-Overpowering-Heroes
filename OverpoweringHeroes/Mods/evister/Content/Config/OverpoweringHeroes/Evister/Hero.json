@@ -1,0 +1,82 @@
+{
+	"evister": {
+		"class" : "overlord",
+		"images" : {
+			"large" : "OverpoweringHeroes/Portraits/Evister/Large.png",
+			"small" : "OverpoweringHeroes/Portraits/Evister/Small.png",
+			"specialtyLarge" : "OverpoweringHeroes/Specialties/Evister/Large.png",
+			"specialtySmall" : "OverpoweringHeroes/Specialties/Evister/Small.png"
+		},
+        "texts" :
+        {
+            "name" : "Evister",
+            "biography" : "Evister was adopted by Minotaurs and he promised to work for them. He was interested in magic vulnerability. He also developped a special way to lead creatures, so they are completely loyal to him.",
+            "specialty" : {
+                "description" : "Vulnerability\r\n...\r\n\r\nMagic Resistance\r\n...",
+                "tooltip" : "Vulnerability\r\n\r\nMagic Resistance",
+                "name" : "Vulnerability Cheater"
+            }
+        },
+		"female": false,
+		"skills":
+		[
+			{ "skill" : "wisdom", "level": "basic" },
+			{ "skill" : "logistics", "level": "basic" },
+			{ "skill" : "tactics", "level": "basic" }
+		],
+		"specialty" : {
+			"bonuses" : {
+				"resistanceBase": {
+					"type" : "MAGIC_RESISTANCE",
+					"val" : 30,
+					"valueType": "BASE_NUMBER"
+				},
+				"resistanceAddition": {
+					"type" : "MAGIC_RESISTANCE",
+					"val" : 10,
+					"updater" : "TIMES_STACK_LEVEL",
+					"valueType": "ADDITIVE_VALUE"
+				},
+				"mindResistance": {
+					"type" : "MIND_IMMUNITY"
+				},
+				"noImmunity": {
+					"type" : "NEGATE_ALL_NATURAL_IMMUNITIES",
+					"propagator": "BATTLE_WIDE",
+					"propagationUpdater" : "BONUS_OWNER_UPDATER",
+					"limiters" : [ "OPPOSITE_SIDE" ]
+				},
+				"morale": {
+					"type": "MORALE",
+					"val": 3,
+					"valueType": "INDEPENDENT_MAX"
+				},
+				"fearless" : {
+					"type" : "FEARLESS"
+				},
+				"power": {
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "primSkill.spellpower",
+					"val" : 1,
+					"updater" : "TIMES_HERO_LEVEL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"army" :
+		[
+			{
+				"min" : 30, "max" : 40,
+				"creature" : "troglodyte"
+			},
+			{
+				"min" : 4, "max" : 6,
+				"creature" : "harpy"
+			},
+			{
+				"min" : 1, "max" : 2,
+				"creature" : "minotaur"
+			}
+		]
+	}
+}
